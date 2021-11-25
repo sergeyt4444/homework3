@@ -6,6 +6,10 @@ import com.mycompany.mylinkedlist.MyLinkedList;
 import java.util.*;
 
 public class TempMain {
+
+    // Чтобы "разогрев" не влиял на измерения производительности, вычисления для отчета делались
+    // в отдельных main
+
     public static void main(String[] args) {
         Map<Integer,Integer> list = new HashMap<>();
         ITestClass testClass = new MapTestClass(list);

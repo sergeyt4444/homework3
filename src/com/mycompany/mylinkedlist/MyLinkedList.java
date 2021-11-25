@@ -11,17 +11,7 @@ public class MyLinkedList <T> implements ILinkedList<T>{
 
     @Override
     public void add(T element) {
-        Node<T> tmpNode = new Node<>();
-        tmpNode.element = element;
-        if (first == null) {
-            first = tmpNode;
-        }
-        else {
-            tmpNode.prevNode = last;
-            last.nextNode = tmpNode;
-        }
-        last = tmpNode;
-        size++;
+        addLast(element);
     }
 
     private void addFirst(T element) {
