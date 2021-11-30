@@ -137,6 +137,13 @@ public class MyLinkedList <T> implements ILinkedList<T>{
 
     @Override
     public void clear() {
+        for (Node<T> x = first; x != null; ) {
+            Node<T> next = x.nextNode;
+            x.element = null;
+            x.nextNode = null;
+            x.prevNode = null;
+            x = next;
+        }
         first = last = null;
         size = 0;
     }
